@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mama Put Online - Taste of Home, Delivered</title>
+  <style>
+    :root{
+      --green: #228B22;
+      --yellow: #FFD700;
+      --red: #DC143C;
+      --bg: #FFFDF5;
+      --text: #2D2D2D;
+    }
+    *{margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', sans-serif;}
+    body{background:var(--bg); color:var(--text); line-height:1.6;}
+    
+    header{
+      background: linear-gradient(135deg, var(--green), var(--yellow));
+      color:white; padding:1rem 5%; position:sticky; top:0; z-index:100;
+      display:flex; justify-content:space-between; align-items:center;
+    }
+    header h1{font-size:1.5rem;}
+    nav a{color:white; text-decoration:none; margin-left:1.5rem; font-weight:500;}
+    nav a:hover{border-bottom:2px solid white;}
+    
+    .hero{
+      padding:4rem 5%; text-align:center; 
+      background:url('https://images.unsplash.com/photo-1603133872878-684f208fb84b?q=80&w=1000') center/cover;
+      color:white; position:relative;
+    }
+    .hero::after{content:''; position:absolute; inset:0; background:rgba(0,0,0,0.5);}
+    .hero-content{position:relative; z-index:2;}
+    .hero h2{font-size:2.5rem; margin-bottom:1rem;}
+    .hero p{font-size:1.2rem; margin-bottom:2rem;}
+    .btn{
+      background:var(--red); color:white; padding:0.8rem 2rem; 
+      border:none; border-radius:8px; font-size:1rem; cursor:pointer;
+      transition:transform 0.2s;
+    }
+    .btn:hover{transform:scale(1.05);}
+    
+    .menu{
+      padding:4rem 5%; text-align:center;
+    }
+    .menu h3{font-size:2rem; color:var(--green); margin-bottom:2rem;}
+    .menu-grid{
+      display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:2rem;
+    }
+    .card{
+      background:white; border-radius:12px; overflow:hidden; box-shadow:0 4px 10px rgba(0,0,0,0.1);
+      transition:transform 0.3s;
+    }
+    .card:hover{transform:translateY(-5px);}
+    .card img{width:100%; height:180px; object-fit:cover;}
+    .card-body{padding:1rem;}
+    .card h4{color:var(--red); margin-bottom:0.5rem;}
+    
+    footer{
+      background:var(--text); color:white; text-align:center; padding:2rem 5%; margin-top:3rem;
+    }
+    
+    @media(max-width:768px){
+      nav{display:none;}
+      .hero h2{font-size:1.8rem;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🍲 Mama Put Online</h1>
+    <nav>
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#contact">Order Now</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Taste of Home, Delivered Hot</h2>
+      <p>Authentic Nigerian soups, swallow & sides. Cooked fresh daily in Port Harcourt.</p>
+      <button class="btn" onclick="alert('Ordering feature coming soon!')">Order Now</button>
+    </div>
+  </section>
+
+  <section class="menu" id="menu">
+    <h3>Today's Special</h3>
+    <div class="menu-grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?q=80&w=800" alt="Banga Soup">
+        <div class="card-body">
+          <h4>Banga Soup & Starch</h4>
+          <p>Rich palm nut soup with fresh fish. ₦2,500</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./image/Egusi Soup.jpg" alt="Egusi">
+        <div class="card-body">
+          <h4>Egusi Soup & Poundo</h4>
+          <p>Thick melon soup with beef & stockfish. ₦2,200</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./image/Party Jollof Rice.jpg" alt="Jollof">
+        <div class="card-body">
+          <h4>Party Jollof Rice</h4>
+          <p>Smoky, spicy, with chicken. ₦1,800</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p>📍 New Heaven, Enugu State | 📞 0800-000-1111</p>
+    <p>© 2026 Mama Put Online. Made with ❤️ and pepper soup.</p>
+  </footer>
+</body>
+</html>
